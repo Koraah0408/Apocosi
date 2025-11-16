@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="15.0" style="-fx-background-color: #fff5e9; -fx-padding: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafeteria.cafeteria.MenuController">
+
+    <children>
+        <HBox alignment="CENTER_RIGHT" prefWidth="350.0" spacing="10.0" style="-fx-padding: 0 0 10 0;">
+            <children>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="navCarritoButton" onAction="#handleIrACarrito" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🛒">
+                    <font><Font size="18.0" /></font>
+                </Button>
+                <Button fx:id="navHistorialButton" onAction="#handleIrAHistorial" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🧾">
+                    <font><Font size="18.0" /></font>
+                </Button>
+            </children>
+        </HBox>
+        <Label fx:id="saludoLabel" style="-fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Hola, ...">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="carritoButton"
+                onAction="#handleVerCarrito"
+                prefHeight="45.0"
+                prefWidth="340.0"
+                style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14; -fx-cursor: hand; -fx-background-radius: 50; -fx-border-radius: 50;"
+                text="Ver Carrito (0)" />
+        <Separator prefWidth="340.0" />
+
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="380.0" style="-fx-background-color: transparent; -fx-background: #fff5e9;">
+            <content>
+                <VBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #fff5e9; -fx-padding: 5;">
+                    <children>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Chocolate caliente" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 40.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarChocolateCaliente" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Capuccino" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 50.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarCapuccino" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Latte" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 50.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarLatte" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Macchiato" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 35.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarMacchiato" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Mocha" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 50.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarMocha" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Americano" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 40.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarAmericano" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefWidth="300.0" spacing="10.0" style="-fx-padding: 5; -fx-border-color: #dfe0df; -fx-border-radius: 5;">
+                            <children>
+                                <VBox>
+                                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #6f594c;" text="Flat White" />
+                                    <Label style="-fx-font-size: 12; -fx-text-fill: #666;" text="MXN 55.00" />
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button onAction="#seleccionarFlatWhite" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 50; -fx-border-radius: 50;" text="Seleccionar" />
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+
+        <Separator prefWidth="340.0" />
+
+        <Button mnemonicParsing="false" onAction="#handleRegresarAction" prefHeight="35.0" prefWidth="340.0" style="-fx-background-color: transparent; -fx-text-fill: #6f594c; -fx-font-weight: bold;" text="Cerrar Sesión" />
+    </children>
+</VBox>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #fff5e9; -fx-padding: 30;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafeteria.cafeteria.RegisterController">
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-fill: #6f594c;" text="Crear Nueva Cuenta" />
+
+        <Label style="-fx-font-size: 16; -fx-text-fill: #6f594c;" text="Ingresa tus datos para registrarte" />
+
+        <VBox alignment="CENTER" prefWidth="300.0" spacing="15.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Nombre Completo" style="-fx-text-fill: #6f594c;" />
+                        <TextField fx:id="nombreField" prefWidth="300.0" promptText="Tu nombre completo" />
+                    </children>
+                </VBox>
+
+                <!-- CAMPO AÑADIDO -->
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Username" style="-fx-text-fill: #6f594c;" />
+                        <TextField fx:id="usernameField" prefWidth="300.0" promptText="Tu nombre de usuario para login" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Contraseña" style="-fx-text-fill: #6f594c;" />
+                        <PasswordField fx:id="passwordField" prefWidth="300.0" promptText="Crea una contraseña segura" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Confirmar Contraseña" style="-fx-text-fill: #6f594c;" />
+                        <PasswordField fx:id="confirmPasswordField" prefWidth="300.0" promptText="Vuelve a escribir la contraseña" />
+                    </children>
+                </VBox>
+
+                <Button onAction="#handleRegisterAction" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-background-radius: 50; -fx-border-radius: 50;" text="Registrarse" />
+            </children>
+        </VBox>
+
+        <Separator prefWidth="300.0" />
+
+        <VBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleVolverLogin" style="-fx-background-color: transparent; -fx-text-fill: #6f594c; -fx-font-weight: bold;" text="← Volver al inicio de sesión" />
+            </children>
+        </VBox>
+    </children>
+</VBox>

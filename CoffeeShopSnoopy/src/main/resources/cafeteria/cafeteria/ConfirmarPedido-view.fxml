@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cafeteria.cafeteria.ConfirmarPedidoController"
+      alignment="TOP_CENTER"
+      prefHeight="600.0"
+      prefWidth="400.0"
+      spacing="20.0"
+      style="-fx-background-color: #fff5e9;">
+
+    <padding>
+        <Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/>
+    </padding>
+
+    <children>
+        <HBox alignment="CENTER_RIGHT" prefWidth="350.0" spacing="10.0" style="-fx-padding: 0 0 10 0;">
+            <children>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="navCarritoButton" onAction="#handleIrACarrito" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🛒">
+                    <font><Font size="18.0" /></font>
+                </Button>
+                <Button fx:id="navHistorialButton" onAction="#handleIrAHistorial" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🧾">
+                    <font><Font size="18.0" /></font>
+                </Button>
+            </children>
+        </HBox>
+        <Label text="Confirmar Pedido" style="-fx-font-weight: bold; -fx-text-fill: #6f594c;">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+
+        <Label fx:id="infoPedidoLabel"
+               style="-fx-font-size: 14; -fx-text-fill: #666; -fx-alignment: center;"
+               wrapText="true"
+               maxWidth="350.0"/>
+
+        <Separator prefWidth="350.0"/>
+
+        <VBox alignment="CENTER_LEFT" prefWidth="350.0" spacing="15.0">
+            <children>
+                <Label text="Ingresa tu Dirección de Envío" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #6f594c;"/>
+
+                <TextArea fx:id="direccionTextArea"
+                          prefHeight="100.0" prefWidth="350.0"
+                          promptText="Calle, número, colonia, referencias..."
+                          style="-fx-font-size: 14;"/>
+
+                <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="350.0"
+                        style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14; -fx-background-radius: 50; -fx-border-radius: 50;"
+                        text="Confirmar Pedido Final"
+                        onAction="#confirmarPedidoFinal"/>
+            </children>
+        </VBox>
+
+        <Separator prefWidth="350.0"/>
+
+        <Button mnemonicParsing="false"
+                style="-fx-background-color: transparent; -fx-text-fill: #6f594c; -fx-font-size: 14;"
+                text="← Volver al Carrito"
+                onAction="#volverAPersonalizar"/>
+    </children>
+</VBox>

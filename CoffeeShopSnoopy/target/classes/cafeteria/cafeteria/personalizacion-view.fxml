@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cafeteria.cafeteria.PersonalizarController"
+            prefHeight="600.0"
+            prefWidth="400.0"
+            fitToWidth="true"
+            style="-fx-background-color: #fff5e9;">
+
+    <content>
+        <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #fff5e9;">
+            <padding>
+                <Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/>
+            </padding>
+
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefWidth="350.0" spacing="10.0" style="-fx-padding: 0 0 10 0;">
+                    <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="navCarritoButton" onAction="#handleIrACarrito" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🛒">
+                            <font><Font size="18.0" /></font>
+                        </Button>
+                        <Button fx:id="navHistorialButton" onAction="#handleIrAHistorial" style="-fx-background-color: transparent; -fx-cursor: hand;" text="🧾">
+                            <font><Font size="18.0" /></font>
+                        </Button>
+                    </children>
+                </HBox>
+                <Label fx:id="tituloLabel" text="Personalizar: Bebida" style="-fx-font-weight: bold; -fx-text-fill: #6f594c;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+
+                <Label text="Ajusta tu bebida a tu gusto." style="-fx-text-fill: #666;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <VBox alignment="CENTER_LEFT" prefWidth="350.0" spacing="25.0">
+                    <children>
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label text="1. Tamaño" style="-fx-font-weight: bold; -fx-font-size: 14; -fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioRegular" text="Regular" selected="true" style="-fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioGrande" text="Grande (+MXN 15)" style="-fx-text-fill: #6f594c;" />
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label text="2. Tipo de Leche" style="-fx-font-weight: bold; -fx-font-size: 14; -fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioEntera" text="Entera" selected="true" style="-fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioDeslactosada" text="Deslactosada (+MXN 5)" style="-fx-text-fill: #6f594c;" />
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label text="3. Estado" style="-fx-font-weight: bold; -fx-font-size: 14; -fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioCaliente" text="Caliente" selected="true" style="-fx-text-fill: #6f594c;" />
+                                <RadioButton fx:id="radioFrio" text="Frio" style="-fx-text-fill: #6f594c;" />
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label text="4. Cantidad" style="-fx-font-weight: bold; -fx-font-size: 14; -fx-text-fill: #6f594c;" />
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="btnMenos" text="-" onAction="#decrementarCantidad" style="-fx-background-color: #dfe0df; -fx-text-fill: #6f594c; -fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 30; -fx-min-height: 30;"/>
+                                        <Label fx:id="cantidadLabel" text="1" style="-fx-font-size: 14; -fx-padding: 5; -fx-text-fill: #6f594c;" />
+                                        <Button fx:id="btnMas" text="+" onAction="#incrementarCantidad" style="-fx-background-color: #dfe0df; -fx-text-fill: #6f594c; -fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 30; -fx-min-height: 30;" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <Separator prefWidth="350.0" />
+
+                <VBox alignment="CENTER" spacing="10.0" prefWidth="350.0">
+                    <children>
+                        <Label text="Total:" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #6f594c;" />
+                        <Label fx:id="totalLabel" text="MXN 40.00" style="-fx-font-weight: bold; -fx-font-size: 20; -fx-text-fill: #6f594c;" />
+                    </children>
+                </VBox>
+
+                <Separator prefWidth="350.0" />
+
+                <Button fx:id="btnConfirmar"
+                        mnemonicParsing="false"
+                        prefHeight="45.0"
+                        prefWidth="350.0"
+                        style="-fx-background-color: #d77836; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14; -fx-background-radius: 50; -fx-border-radius: 50;"
+                        text="Añadir al Carrito"
+                        onAction="#handleAnadirAlCarrito" />
+            </children>
+        </VBox>
+    </content>
+</ScrollPane>
